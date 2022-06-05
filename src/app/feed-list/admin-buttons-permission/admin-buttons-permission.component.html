@@ -1,0 +1,4 @@
+<ng-container *ngIf="(isAdmin$ | async)">
+  <button mat-button color="primary" (click)="deleteFeedFromList.emit(id)">Delete 🅧</button>
+  <button mat-button color="primary" (click)="onEdit()">Edit   ✎</button>
+</ng-container>

@@ -1,0 +1,12 @@
+button {
+  background: linear-gradient(0.25turn, rgba(220, 14, 14, 0.37), rgba(246, 157, 60, 0.54));
+  font-weight: bold;
+  width: 80px;
+
+  line-height: 28px;
+
+}
+
+button:first-child {
+  margin-bottom: 3px;
+}

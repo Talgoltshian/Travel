@@ -1,0 +1,36 @@
+<app-nav-bar></app-nav-bar>
+<ng-container *ngIf="!(isLoading$ | async) else loading ">
+  <mat-card-actions class="add-button-container" routerLink="/creator">
+    <button mat-button color="primary">+</button>
+  </mat-card-actions>
+  <div class="main-container">
+    <ng-container *ngFor="let feed of feedList$ | async">
+      <mat-card class="card-container">
+        <div class="img-container">
+          <img mat-card-image src="https://countryflagsapi.com/png/{{feed.Location}}"
+               alt="picture">
+        </div>
+        <div class="description-card-container">
+          <p>Name: {{feed.name}}</p>
+          <p>Location: {{feed.Location}}</p>
+          <p>Post Date: {{feed.data}}</p>
+        </div>
+        <mat-card-actions class="button-container">
+          <button mat-button color="primary" (click)="onClickPreview(feed.id)">View   👁</button>
+          <app-admin-buttons-permission [id]="feed.id" (deleteFeedFromList)="onDeleteCard($event)"></app-admin-buttons-permission>
+        </mat-card-actions>
+      </mat-card>
+      <div class="view-container" *ngIf="feed.isOpen">
+        <p>{{feed.description.mainTitle}}</p>
+        <div class="img-description-container">
+          <img [src]="feed.description.img">
+        </div>
+          <p>{{feed.description.description}}</p>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
+<ng-template #loading>
+  <t-loader></t-loader>
+</ng-template>
+

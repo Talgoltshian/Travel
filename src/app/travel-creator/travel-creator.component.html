@@ -1,0 +1,38 @@
+<app-nav-bar></app-nav-bar>
+<div class="creator-container">
+  <form [formGroup]="creatorForm" class="form-container" (ngSubmit)="OnSubmitCreatCard()">
+    <div class="card-creator">
+      <t-input
+        [label]="'Full name'"
+        [placeholder]="'name'"
+        [name]="'name'"
+        [type]="'text'"
+        formControlName="userName"
+        [validators]="[]"
+      ></t-input>
+      <t-input
+        [label]="'Date of your travel'"
+        [placeholder]="'Date'"
+        [name]="'Date'"
+        [type]="'date'"
+        formControlName="date"
+        [validators]="[]"
+      ></t-input>
+      <mat-form-field appearance="fill">
+        <mat-label>Country Name</mat-label>
+        <mat-select matNativeControl formControlName="countryName">
+          <mat-option style="background-color: #FF8D29" *ngFor="let country of countries$ | async" [value]="country">
+            {{country}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="card-view">
+      <input placeholder="Title" type="text " formControlName="title">
+      <input placeholder="Image URL" formControlName="imgUrl" type="text">
+      <textarea formControlName="description" matInput placeholder="Tell about your travel"></textarea>
+      <button type="submit" mat-raised-button color="primary">Submit</button>
+    </div>
+  </form>
+</div>
+

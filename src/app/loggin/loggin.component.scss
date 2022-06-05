@@ -1,0 +1,94 @@
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.hibob.com/background-images/Home1.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  background-position: 50%;
+  background-size: cover;
+
+
+  form {
+    border-radius: 10px;
+    background: #fffefe;
+    width: 25%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: -2px -2px 20px 14px rgba(210, 199, 190, 0.1);
+
+    .form-align {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .welcome {
+      color: #FF8D29;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 40px;
+      font-family: Sentinel SSm A, Sentinel SSm B, Merriweather, Miriam Libre Hebrew, Bitter, Roboto Slab, Rubik Hebrew, Georgia, Hoefler Text, Baskerville, Times, Times New Roman, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Segoe UI, Twemoji Mozilla, Noto Color Emoji, NotoColorEmoji, EmojiOne Color, Android Emoji, Noto Emoji, EmojiSymbols, Symbola, serif;
+      margin-top: 30px;
+    }
+
+    .login {
+      margin-top: 50px;
+      font-size: 50px;
+      color: #535353 ;
+    }
+
+    t-input {
+      margin-top: 15px;
+    }
+
+    t-input:first-child {
+      margin-top: 40px;
+    }
+  }
+
+  button {
+    margin-top: 20px;
+    width: 180px;
+    opacity: 0.8;
+    background-color: #FF8D29;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  app-nav-bar {
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  .badge-description {
+    color: #f6f7fc;
+    font-weight: bold;
+  }
+
+  .badge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    width: 100%;
+    background-color: #535353;
+    height: 10vh;
+  }
+}
+
