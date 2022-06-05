@@ -1,3 +1,6 @@
+$Myfont: Sentinel SSm A, Sentinel SSm B, Merriweather, Miriam Libre Hebrew, Bitter, Roboto Slab, Rubik Hebrew, Georgia, Hoefler Text, Baskerville, Times, Times New Roman, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Segoe UI, Twemoji Mozilla, Noto Color Emoji, NotoColorEmoji, EmojiOne Color, Android Emoji, Noto Emoji, EmojiSymbols, Symbola, serif;
+
+
 
 .form-container {
   display: flex;
@@ -18,7 +21,7 @@
     border-radius: 10px;
     background: #fffefe;
     width: 25%;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -40,7 +43,7 @@
       align-items: center;
       font-weight: bold;
       font-size: 40px;
-      font-family: Sentinel SSm A, Sentinel SSm B, Merriweather, Miriam Libre Hebrew, Bitter, Roboto Slab, Rubik Hebrew, Georgia, Hoefler Text, Baskerville, Times, Times New Roman, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Segoe UI, Twemoji Mozilla, Noto Color Emoji, NotoColorEmoji, EmojiOne Color, Android Emoji, Noto Emoji, EmojiSymbols, Symbola, serif;
+      font-family: MyFont;
       margin-top: 30px;
     }
 
@@ -64,6 +67,12 @@
     width: 180px;
     opacity: 0.8;
     background-color: #FF8D29;
+    border-radius: 10px;
+    height: 30px;
+    font-family: MyFont;
+    font-weight: bold;
+    cursor: pointer;
+    
   }
 
   button:hover {

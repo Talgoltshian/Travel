@@ -84,6 +84,7 @@
     }
 
     button {
+      background: linear-gradient(0.25turn, rgba(220, 14, 14, 0.37), rgba(246, 157, 60, 0.54));
       position: absolute;
       right: 20px;
       bottom: 20px;
@@ -91,12 +92,13 @@
       height: 100px;
       border-radius: 100%;
       font-size: 20px;
-      box-shadow: 0px 0px 20px 0px orange;
-      opacity: 0.9;
+      color: #c2185b;
+      border: 1px solid purple;
     }
 
     button:hover {
-      opacity: 1;
+      font-weight: bold ;
+      box-shadow: 0px 1px 13px 8px #faccb3;
     }
   }
 }

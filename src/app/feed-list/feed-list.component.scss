@@ -130,8 +130,8 @@ app-admin-buttons-permission {
 
 .add-button-container{
   background: linear-gradient(0.25turn, rgba(220, 14, 14, 0.37), rgba(246, 157, 60, 0.54));
-  width: 80px;
-  height: 60px;
+  width: 100px;
+  height: 80px;
   position: absolute;
   bottom: 10px;
   right: 20px;
@@ -139,6 +139,8 @@ app-admin-buttons-permission {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid purple;
+
 
   button{
     font-size: 40px;
@@ -146,7 +148,7 @@ app-admin-buttons-permission {
 }
 
 .add-button-container:hover {
-  border: 1px solid purple;
+  box-shadow: 0px 1px 13px 8px #faccb3;
 }
 
 .loader-container {
