@@ -21,8 +21,9 @@ $Myfont: Sentinel SSm A, Sentinel SSm B, Merriweather, Miriam Libre Hebrew, Bitt
     border-radius: 10px;
     background: #fffefe;
     width: 25%;
-    height: 60vh;
+    height: 65%;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: -2px -2px 20px 14px rgba(210, 199, 190, 0.1);
@@ -101,3 +102,10 @@ $Myfont: Sentinel SSm A, Sentinel SSm B, Merriweather, Miriam Libre Hebrew, Bitt
   }
 }
 
+@media screen and (min-height: 900px) {
+  .form-container {
+    form{
+      height: 60vh;
+    }
+  }
+}

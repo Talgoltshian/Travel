@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {LogginService} from "../../loggin/loggin.service";
+import {LoginService} from "../../loggin/login.service";
 import {BehaviorSubject, Observable} from "rxjs";
 import {Params, Router} from "@angular/router";
 import {TravelCreatorApiService} from "../../travel-creator/travel-creator-api.service";
@@ -15,7 +15,7 @@ export class AdminButtonsPermissionComponent implements OnInit {
   @Output() deleteFeedFromList: EventEmitter<string> = new EventEmitter<string>();
   isAdmin$: Observable<boolean> = this.loginService.getIsAdmin();
 
-  constructor(private loginService: LogginService , private router:Router, private travelCreatorApiService: TravelCreatorApiService) { }
+  constructor(private loginService: LoginService , private router:Router, private travelCreatorApiService: TravelCreatorApiService) { }
 
   ngOnInit(): void {
   }

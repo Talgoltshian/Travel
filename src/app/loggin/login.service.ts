@@ -6,7 +6,7 @@ import {HttpClient} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
-export class LogginService {
+export class LoginService {
   private readonly loginUser$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   private readonly user$: ReplaySubject<UserInterface | null> = new ReplaySubject<UserInterface | null>(1);
 

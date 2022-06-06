@@ -2,15 +2,15 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, ValidatorFn, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
-import {LogginService} from "./loggin.service";
+import {LoginService} from "./login.service";
 
 @Component({
   selector: 'app-loggin',
-  templateUrl: './loggin.component.html',
-  styleUrls: ['./loggin.component.scss'],
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LogginComponent implements OnInit {
+export class LoginComponent implements OnInit {
   UserNameValidators: ValidatorFn[] = [Validators.required, Validators.minLength(9), Validators.email];
   passwordValidators: ValidatorFn[] = [Validators.required, Validators.minLength(5)];
 
@@ -19,7 +19,7 @@ export class LogginComponent implements OnInit {
     password: [undefined, this.passwordValidators]
   });
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private httpClient: HttpClient, private loginService: LogginService) {
+  constructor(private formBuilder: FormBuilder, private router: Router, private httpClient: HttpClient, private loginService: LoginService) {
   }
 
   ngOnInit(): void {

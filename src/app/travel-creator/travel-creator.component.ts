@@ -19,7 +19,7 @@ export class TravelCreatorComponent implements OnInit {
   creatorForm = this.formBuilder.group({
       userName: this.formBuilder.control(this.card.countryName, [Validators.required]),
       date: this.formBuilder.control(this.card.countryName, [Validators.required]),
-      countryName: this.formBuilder.control(this.card.countryName),
+      countryName: this.formBuilder.control(this.card.countryName , Validators.required),
       title: this.formBuilder.control(this.card.title, [Validators.required]),
       description: this.formBuilder.control(this.card.description, [Validators.required]),
       imgUrl: this.formBuilder.control(this.card.imgUrl, [Validators.required])
@@ -45,7 +45,7 @@ export class TravelCreatorComponent implements OnInit {
     this.editCardFeed();
   }
 
-  OnSubmitCreatCard(): void {
+  OnSubmitCreatAndEditCard(): void {
    if (this.creatorForm.valid) {
       let id;
       this.activatedRoute.params.subscribe(params => {

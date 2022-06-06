@@ -8,13 +8,13 @@ import {
   UrlTree
 } from '@angular/router';
 import {map, Observable} from 'rxjs';
-import {LogginService} from "./loggin.service";
+import {LoginService} from "./login.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginGuard implements CanActivate {
-  constructor(private logginService: LogginService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private logginService: LoginService, private router: Router, private activatedRoute: ActivatedRoute) {
   }
   canActivate(
     route: ActivatedRouteSnapshot,
